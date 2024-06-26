@@ -50,6 +50,7 @@ const Button = styled.button`
     cursor: not-allowed;
   }
 `;
+// manejo del login
 
 const Login = ({ onLoginSuccess }) => {
   const [username, setUsername] = useState('');
