@@ -12,7 +12,7 @@ import Control from './Control/Control';
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  // Función para manejar el inicio de sesión    
+  // Función para manejar el éxito del inicio de sesión
   const handleLoginSuccess = () => {
     setIsLoggedIn(true);
   };

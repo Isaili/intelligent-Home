@@ -50,7 +50,6 @@ const Button = styled.button`
     cursor: not-allowed;
   }
 `;
-// manejo del login
 
 const Login = ({ onLoginSuccess }) => {
   const [username, setUsername] = useState('');
@@ -60,7 +59,8 @@ const Login = ({ onLoginSuccess }) => {
   const handleLogin = () => {
     if (username === 'admin' && password === 'admin') {
       alert('¡Bienvenido, administrador!');
-      
+      // Llama a la función proporcionada para manejar el éxito del inicio de sesión
+      onLoginSuccess();
     } else {
       setAttemptCount(attemptCount + 1);
       if (attemptCount === 1) {
