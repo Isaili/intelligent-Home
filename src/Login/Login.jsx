@@ -51,7 +51,7 @@ const Button = styled.button`
   }
 `;
 
-const Login = () => {
+const Login = ({ onLoginSuccess }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [attemptCount, setAttemptCount] = useState(0);
@@ -59,10 +59,10 @@ const Login = () => {
   const handleLogin = () => {
     if (username === 'admin' && password === 'admin') {
       alert('¡Bienvenido, administrador!');
-      // Aquí podrías redirigir a la página principal o realizar otra acción
+      
     } else {
       setAttemptCount(attemptCount + 1);
-      if (attemptCount === 2) {
+      if (attemptCount === 1) {
         alert('¡Intentos agotados! ¡Es un ladrón!');
       } else {
         alert('Usuario o contraseña incorrectos. Intento ' + (attemptCount + 1));
